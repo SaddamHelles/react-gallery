@@ -9,11 +9,11 @@ import Typography from "@mui/material/Typography";
 export default function CustomCard(props) {
   console.log("Props: ", props);
   return (
-    <Card sx={{ maxWidth: 345 }}>
+    <Card sx={{ maxWidth: 345, margin: "20px 10px" }}>
       <CardMedia
         component="img"
-        height="140"
-        image={props.urls.regular}
+        height="180"
+        image={props.urls.small}
         alt="green iguana"
       />
       <CardContent>
@@ -25,8 +25,17 @@ export default function CustomCard(props) {
         </Typography>
       </CardContent>
       <CardActions>
-        <Button size="small">Share</Button>
-        <Button size="small">Learn More</Button>
+        <Button onClick={() => window.open(props.urls.full)} size="small">
+          Heigh Resolution
+        </Button>
+        <Button
+          onClick={() =>
+            window.open(`https://unsplash.com/@${props.user.username}`)
+          }
+          size="small"
+        >
+          Learn More
+        </Button>
       </CardActions>
     </Card>
   );

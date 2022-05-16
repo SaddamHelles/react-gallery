@@ -8,7 +8,10 @@ import SearchIcon from "@mui/icons-material/Search";
 import { Search, SearchIconWrapper, StyledInputBase } from "./Style";
 import PhotoCameraBackIcon from "@mui/icons-material/PhotoCameraBack";
 
-export default function SearchAppBar() {
+export default function SearchAppBar(props) {
+  const handleChange = (e) => {
+    props.setSearchValue(e.target.value);
+  };
   return (
     <Box sx={{ flexGrow: 1 }}>
       <AppBar position="static">
@@ -37,6 +40,8 @@ export default function SearchAppBar() {
             <StyledInputBase
               placeholder="Search…"
               inputProps={{ "aria-label": "search" }}
+              onChange={handleChange}
+              value={props.searchValue}
             />
           </Search>
         </Toolbar>
