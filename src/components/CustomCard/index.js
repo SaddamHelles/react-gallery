@@ -9,19 +9,23 @@ import Typography from "@mui/material/Typography";
 export default function CustomCard(props) {
   console.log("Props: ", props);
   return (
-    <Card sx={{ maxWidth: 345, margin: "20px 10px" }}>
+    <Card sx={{ width: 320, height: 280, margin: "20px 10px" }}>
       <CardMedia
         component="img"
         height="180"
         image={props.urls.small}
         alt="green iguana"
       />
-      <CardContent>
+      <CardContent
+        sx={{
+          fontSize: "20px",
+          marginBottom: "0px",
+          paddingBottom: 0,
+          height: 40,
+        }}
+      >
         <Typography gutterBottom variant="h5" component="div">
           {props.user.first_name}
-        </Typography>
-        <Typography variant="body2" color="text.secondary">
-          {props.alt_description}
         </Typography>
       </CardContent>
       <CardActions>
