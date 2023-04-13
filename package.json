@@ -1,7 +1,7 @@
 {
-  "homepage": "https://saddamhelles.github.io/react-gallery",
   "name": "gallery-app",
   "version": "0.1.0",
+  "homepage": "https://SaddamHelles.github.io/react-gallery",
   "private": true,
   "dependencies": {
     "@emotion/react": "^11.9.0",
